@@ -9,6 +9,13 @@ n = int(fin.readline())         #для читання 1 числа з файл�
 s = 0.0
 for x in range(1,(n+1)):
     s = s + 1/math.pow(x,2)
+# n = 3
+# x = 1
+# s = 0.0 + 1/math.pow(1,2)
+# x = 2
+# s = 1 + 1/math.pow(2,2)
+# x = 3
+# s = попереднє значення s + 1/math.pow(3,2)
 fout.write(str("{:.6f}".format(s)))
 
 fin.close()         #закрити файл
