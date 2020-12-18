@@ -7,7 +7,7 @@ canvas.create_polygon(10,10,10,60,50,35)
 
 def move(event):
     if event.keysym == 'Up':
-        canvas.move(1,0,-5) # ID = 1, x = 0, y = -5
+        canvas.move(1,0,-5)         # ID = 1, x = 0, y = -5
     elif event.keysym == 'Down':
         canvas.move(1,0,5)
     elif event.keysym == 'Left':

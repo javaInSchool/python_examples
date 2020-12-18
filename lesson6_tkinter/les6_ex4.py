@@ -2,10 +2,12 @@ import time
 from tkinter import *
 
 class Ball:
-    def __init__(self,canvas, color):
+    def __init__(self,canvas, color, x, y):
         self.canvas = canvas
         self.id = canvas.create_oval(10,10,25,25, fill = color)
-        self.canvas.move(self.id, 245,100)
+        self.x = x
+        self.y = y
+        self.canvas.move(self.id, self.x, self.y)
     def draw(self):
         pass
 
@@ -17,7 +19,8 @@ canvas = Canvas(tk, width = 500, height = 400)
 canvas.pack()
 tk.update()
 
-ball = Ball(canvas, 'red')
+ball = Ball(canvas, 'red', 245, 100)
+ballForGame = Ball(canvas,'blue', 245, 150)
 
 while 1:
     tk.update_idletasks()
